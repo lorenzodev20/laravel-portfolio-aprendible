@@ -14,11 +14,11 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        //Creamos el seeder para la creacion de un usuario por defecto
+        DB::table('users')->truncate();
         DB::table('users')->insert([
             'name' => 'administrador',
             'email' => 'admin@panel.com',
-            'password' => Hash::make('admin'),
+            'password' => Hash::make('password'),
         ]);
     }
 }

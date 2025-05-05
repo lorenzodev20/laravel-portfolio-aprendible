@@ -1,9 +1,27 @@
 # Aplicativo Mi Portafolio
-- Hecho en Laravel 7
-- Para ejecutar el proyecto se debe ejecutar el comando: composer install o composer update para que descargue las dependencias.
-- Luego hay que crear la BD.
-- Luego ejecutar las migraciones con el comando: php artisan make:migrate. Tambien cuenta con un usuario predefinido el cual es: 
--name: Administrador email: admin@panel.com password: admin
-- Se debe instalar node con el comando "npm install"
-- Si haras algun cambio en el css o js recuerda compilar los archivos con "npm run dev"
-- Antes de publicar en producccion recuerda ejecutar "npm run prod"
+Hecho en Laravel 7.
+
+### Pasos para la instalación manual
+- Crear la base de datos MySQL o SQlite
+- Copiar el .env.example a .env y actualizarlo según tu necesidades
+- Ejecutar los siguientes comandos:
+``` 
+- composer install
+- php artisan key:generate
+- php artisan migrate
+- php artisan db:seed
+```
+- Node version 10.x, comandos a ejecutar:
+```
+npm install
+npm run prod
+```
+
+### Usando Docker compose
+Ejecutar el script en bash: `./setup_local.sh` y se hará todo automáticamente.
+
+Acceso al sistema:
+```
+user: admin@panel.com
+password: password
+```
